@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>bemywhat</title>
+
+  <link rel="preconnect"
+  href="https://fonts.googleapis.com">
+
+  <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+  rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+
+
+    body{
+
+      min-height:100vh;
+
+      overflow-x:hidden;
+      overflow-y:auto;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      text-align:center;
+
+      background:
+      linear-gradient(
+      rgba(255,182,193,0.35),
+      rgba(255,182,193,0.35)
+      ),
+
+      url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1974&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+      background-attachment:fixed;
+
+      color:white;
+
+      position:relative;
+
+      padding:50px 20px;
+    }
+
+
+
+    body::before{
+
+      content:"";
+
+      position:absolute;
+
+      inset:0;
+
+      backdrop-filter:blur(4px);
+    }
+
+
+
+    .container{
+
+      position:relative;
+
+      z-index:2;
+
+      width:90%;
+      max-width:900px;
+
+      margin:auto;
+
+      animation:fade 1.5s ease;
+    }
+
+
+
+    h1{
+
+      font-size:70px;
+
+      line-height:1.2;
+
+      margin-bottom:20px;
+
+      text-shadow:
+      0 0 15px rgba(0,0,0,0.3);
+    }
+
+
+
+    .subtitle{
+
+      font-size:24px;
+
+      margin-bottom:40px;
+
+      color:#fff5f7;
+
+      line-height:1.6;
+    }
+
+
+
+    .buttons{
+
+      position:relative;
+
+      height:160px;
+
+      margin-top:20px;
+    }
+
+
+
+    button{
+
+      padding:18px 45px;
+
+      border:none;
+
+      border-radius:50px;
+
+      font-size:24px;
+
+      font-weight:600;
+
+      cursor:pointer;
+
+      transition:0.3s;
+    }
+
+
+
+    #yes{
+
+      background:white;
+
+      color:#ff4f81;
+
+      box-shadow:
+      0 0 25px rgba(255,255,255,0.6);
+    }
+
+
+
+    #yes:hover{
+
+      transform:scale(1.08);
+    }
+
+
+
+    #no{
+
+      background:#ff4f81;
+
+      color:white;
+
+      position:fixed;
+
+      margin-left:20px;
+
+      transition:0.15s;
+    }
+
+
+
+    .message{
+
+      display:none;
+
+      margin-top:40px;
+
+      padding:40px;
+
+      border-radius:30px;
+
+      background:
+      rgba(255,255,255,0.18);
+
+      backdrop-filter:blur(10px);
+
+      animation:fade 1s ease;
+    }
+
+
+
+    .message h2{
+
+      font-size:50px;
+
+      margin-bottom:20px;
+    }
+
+
+
+    .message p{
+
+      font-size:22px;
+
+      line-height:1.8;
+    }
+
+
+
+    .heart{
+
+      position:absolute;
+
+      color:white;
+
+      font-size:30px;
+
+      animation:fall linear forwards;
+
+      z-index:1;
+    }
+
+
+
+    @keyframes fade{
+
+      from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+      }
+
+      to{
+
+        opacity:1;
+
+        transform:translateY(0);
+      }
+    }
+
+
+
+    @keyframes fall{
+
+      from{
+
+        transform:translateY(-10vh);
+
+        opacity:1;
+      }
+
+      to{
+
+        transform:translateY(110vh);
+
+        opacity:0;
+      }
+    }
+
+
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:45px;
+      }
+
+      .subtitle{
+        font-size:18px;
+      }
+
+      button{
+        font-size:18px;
+        padding:14px 30px;
+      }
+
+      .message h2{
+        font-size:35px;
+      }
+
+      .message p{
+        font-size:18px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="container">
+
+    <h1>
+      can we be us..? :] <br>
+    </h1>
+
+
+
+    <div class="subtitle">
+
+      fyi being with u makes me happier <br>
+
+      than u could ever imagine:p 
+
+    </div>
+
+
+
+    <div class="buttons">
+
+      <button id="yes">
+        YES
+      </button>
+
+      <button id="no">
+        NO
+      </button>
+
+    </div>
+
+
+
+    <div class="message" id="message">
+
+      <h2>
+        YAYAYAYAYYAAY
+      </h2>
+
+      <p>
+
+        i knew you would say yes HAHAHA <br><br>
+
+        thank you for coming into my life
+        and making everything feel softer, warmer,
+        and so much happier every day. <br>
+
+        i promise to stay by your side through everything, <br>
+        
+        make you smile when the world feels heavy,
+        hold your heart gently, <br>
+
+        and love you with all of mine :DD
+
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <audio autoplay loop>
+
+    <source
+    src="https://files.catbox.moe/6rj7ju.mp3"
+    type="audio/mp3">
+
+  </audio>
+
+
+
+  <script>
+
+    const noBtn =
+    document.getElementById("no");
+
+    const yesBtn =
+    document.getElementById("yes");
+
+    const message =
+    document.getElementById("message");
+
+
+
+    // TOMBOL NO PINDAH-PINDAH
+
+    noBtn.addEventListener(
+    "mousemove", () => {
+
+      const maxX =
+      window.innerWidth
+      - noBtn.offsetWidth;
+
+      const maxY =
+      window.innerHeight
+      - noBtn.offsetHeight;
+
+      const randomX =
+      Math.floor(
+      Math.random() * maxX
+      );
+
+      const randomY =
+      Math.floor(
+      Math.random() * maxY
+      );
+
+      noBtn.style.left =
+      randomX + "px";
+
+      noBtn.style.top =
+      randomY + "px";
+
+    });
+
+
+
+
+    // KALAU YES DIPENCET
+
+    yesBtn.addEventListener(
+    "click", () => {
+
+      message.style.display =
+      "block";
+
+      createHearts();
+
+      window.scrollTo({
+
+        top:
+        document.body.scrollHeight,
+
+        behavior:"smooth"
+
+      });
+
+    });
+
+
+
+
+    // HUJAN LOVE
+
+    function createHearts(){
+
+      setInterval(() => {
+
+        const heart =
+        document.createElement("div");
+
+        heart.classList.add("heart");
+
+        heart.innerHTML = "💖";
+
+        heart.style.left =
+        Math.random()
+        * window.innerWidth + "px";
+
+        heart.style.fontSize =
+        (20 + Math.random() * 30)
+        + "px";
+
+        heart.style.animationDuration =
+        (3 + Math.random() * 2)
+        + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+
+          heart.remove();
+
+        },5000);
+
+      },200);
+    }
+
+  </script>
+
+</body>
+</html>
